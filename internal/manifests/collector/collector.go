@@ -50,6 +50,7 @@ func Build(params manifests.Params) ([]client.Object, error) {
 		manifests.Factory(Service),
 		manifests.Factory(HeadlessService),
 		manifests.Factory(MonitoringService),
+		manifests.Factory(ExtensionService),
 		manifests.Factory(Ingress),
 	}...)
 
