@@ -122,6 +122,10 @@ func ExtensionService(params manifests.Params) (*corev1.Service, error) {
 		return nil, err
 	}
 
+	if len(ports) == 0 {
+		return nil, nil
+	}
+
 	return &corev1.Service{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:        name,
